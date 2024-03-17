@@ -1,14 +1,26 @@
-.content {
+.main {
     display: flex;
-    flex: 1;
-    flex-wrap: 1;
     justify-content: center;
-    max-width: 1000px;
-    max-height: 1000px;
+    align-content: center;
 }
 
-.square {
-    background-color: beige;
-    min-height: 100px;
-    min-width: 100px;
+.content {
+    display: flex;
+    width: 600px;
+    gap: 1px;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 800px;
+    box-sizing: border-box;
+}
+
+.squareX {
+    display: flex;
+}
+
+.squareY {
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    box-sizing: border-box;
 }
