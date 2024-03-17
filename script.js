@@ -1,5 +1,18 @@
 const content = document.querySelector(".content");
 
+const defaultAmount = 16;
+
+for (let i = 0; i <= defaultAmount; i++) {
+    const squareX = document.createElement("div");
+    squareX.classList.add("squareX");
+    content.appendChild(squareX);
+    for (let i = 0; i <= defaultAmount; i++) {
+        const squareY = document.createElement("div");
+        squareY.classList.add("squareY");
+        squareY.style.cssText = `height: calc(800px / ${defaultAmount}); width: calc(800px / ${defaultAmount});`;
+        squareX.appendChild(squareY);
+    }
+}
 
 
 function addSquare(inputAmount) {
