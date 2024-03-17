@@ -1,0 +1,14 @@
+.content {
+    display: flex;
+    flex: 1;
+    flex-wrap: 1;
+    justify-content: center;
+    max-width: 1000px;
+    max-height: 1000px;
+}
+
+.square {
+    background-color: beige;
+    min-height: 100px;
+    min-width: 100px;
+}
