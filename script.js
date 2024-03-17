@@ -3,11 +3,22 @@ const content = document.querySelector(".content");
 
 
 function addSquare(inputAmount) {
-    for (let i = 0; i <= inputAmount; i++) {
-        const square = document.createElement("div");
-        square.classList.add("square");
-        content.appendChild(square);
+    while(content.firstChild) {
+        content.removeChild(content.firstChild);
     }
+
+    for (let i = 0; i <= inputAmount; i++) {
+        const squareX = document.createElement("div");
+        squareX.classList.add("squareX");
+        content.appendChild(squareX);
+        for (let i = 0; i <= inputAmount; i++) {
+            const squareY = document.createElement("div");
+            squareY.classList.add("squareY");
+            squareY.style.cssText = `height: calc(800px / ${inputAmount}); width: calc(800px / ${inputAmount});`;
+            squareX.appendChild(squareY);
+        }
+    }
+    
 }
 
 
