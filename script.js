@@ -15,6 +15,7 @@ for (let i = 0; i < defaultAmount; i++) {
         squareX.appendChild(squareY);
     }
 }
+addColor();
 
 
 
