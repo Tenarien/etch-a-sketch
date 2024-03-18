@@ -21,10 +21,13 @@ addColor();
 
 function addColor() {
     const squareColor = document.querySelectorAll(".squareY");
-    console.log(squareColor);
     squareColor.forEach(square => {
-        square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = "black";
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        let bgColor = "rgb(" + r + "," + g + "," + b + ")";
+        square.addEventListener('mouseenter', () => {
+            square.style.backgroundColor = bgColor;
         });
     }); 
 }
@@ -49,7 +52,6 @@ function addSquare(inputAmount) {
         }
     }
     addColor()
-    
 }
 
 
@@ -57,7 +59,7 @@ const amountBtn = document.querySelector(".amountBtn");
 amountBtn.addEventListener("click", () => {
     let inputAmount = prompt("Please input the amount of squares: ")
     inputAmount = parseInt(inputAmount);
-    if (inputAmount < 0 || inputAmount > 65 || typeof inputAmount !== "number") {
+    if (inputAmount < 0 || inputAmount > 64 || typeof inputAmount !== "number") {
         alert("You provided a wrong number (Max 64)");
     } else {
         addSquare(inputAmount);
